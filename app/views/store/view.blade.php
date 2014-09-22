@@ -9,7 +9,7 @@
                 <p>{{ $product->description }}</p>
 
                 <hr />
-
+                @if( $product->availability =="1" )
                 {{ Form::open(array('url' => '/store/addtocart')) }}
                     {{ Form::label('quantity', 'Qty') }}
                     {{ Form::text('quantity', 1, array('maxlength' => 2)) }}
@@ -20,6 +20,7 @@
                          ADD TO CART
                     </button>
                 {{ Form::close() }}
+                @endif
             </div><!-- end product-details -->
             <div id="product-info">
                 <p class="price">{{ $product->price }}</p>
@@ -27,6 +28,6 @@
                             <span class="{{ Availability::displayClass($product->availability) }}">
                                 {{ Availability::display($product->availability) }}
                             </span></h5>
-                <p>Product Code: <span>{{ $product->id }}</span></p>
+                
 </div><!-- end product-info -->
 @stop

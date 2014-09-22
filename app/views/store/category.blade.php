@@ -49,7 +49,7 @@
                         <h5>Availability: <span class="{{ Availability::displayClass($products->availability) }}">
                                 {{ Availability::display($products->availability) }}
                             </span></h5>
-
+                        @if ($products->availability == "1" )
                        <p>
                             {{ Form::open(array('url' => 'store/addtocart')) }}
                             {{ Form::hidden('quantity', 1) }}
@@ -61,6 +61,7 @@
                             </button>
                             {{ Form::close() }}
                         </p>
+                        @endif
                     </div>
                     @endforeach
                 </div>

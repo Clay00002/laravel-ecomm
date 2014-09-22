@@ -18,12 +18,12 @@
                 <div id="products">
                     @foreach($product as $product)
                     <div class="product">
-                        <a href="/ecomm/public/store/view/{{ $product->id }}">
+                        <a href="/laravel-ecomm/public/store/view/{{ $product->id }}">
                             {{ HTML::image($product->image, $product->title,
                              array('class' => 'feature', 'width' => '240', 'height' => '127')) }}
                         </a>
 
-                        <h3><a href="/ecomm/public/store/view/{{ $product->id }}">{{ $product->title }}</a></h3>
+                        <h3><a href="/laravel-ecomm/public/store/view/{{ $product->id }}">{{ $product->title }}</a></h3>
 
                         <p>{{ $product->description }}</p>
 
@@ -34,7 +34,7 @@
                                 {{ Availability::display($product->availability) }}
                             </span>
                         </h5>
-
+                        @if( $product->availability == "1" )
                         <p>
                             {{ Form::open(array('url' => 'store/addtocart')) }}
                             {{ Form::hidden('quantity', 1) }}
@@ -46,6 +46,7 @@
                             </button>
                             {{ Form::close() }}
                         </p>
+                        @endif
                     </div>
                     @endforeach
                 </div><!-- end product -->
