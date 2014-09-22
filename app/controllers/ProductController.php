@@ -72,11 +72,11 @@ class ProductController extends BaseController {
 			File::delete('public/'.$product->image);
 			$product->delete();
 			return Redirect::to('admin/product/index')
-					->with('message', '刪除成功');
+				   ->with('message', '刪除成功');
 		}
 
 		return Redirect::to('admin/product/index')
-					->with('message', '刪除失敗,請再試一次');
+			   ->with('message', '刪除失敗,請再試一次');
 					
 	}
 
@@ -95,7 +95,7 @@ class ProductController extends BaseController {
 		}
 
 		return Redirect::to('admin/product/index')
-			       ->with('message', '產品更新失敗');
+			   ->with('message', '產品更新失敗');
 	}
 
 }

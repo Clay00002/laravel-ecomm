@@ -190,8 +190,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Image' => 'Intervention\Image\Facades\Image',
-		'Cart' => 'Moltin\Cart\Facade',
+		'Image' 		  => 'Intervention\Image\Facades\Image',
+		'Cart' 			  => 'Moltin\Cart\Facade',
 	),
 
 );
