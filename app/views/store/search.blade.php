@@ -13,19 +13,19 @@
 	<div id="search-results">
 		 @foreach($product as $products)
                     <div class="product">
-                        <a href="/ecomm/public/store/view/{{ $products->id }}">
+                        <a href="/laravel-ecomm/public/store/view/{{ $products->id }}">
                             {{ HTML::image($products->image, $products->title,
                              array('class' => 'feature', 'width' => '240', 'height' => '127')) }}
                         </a>
 
-                        <h3><a href="/ecomm/public/store/view/{{ $products->id }}">{{ $products->title }}</a></h3>
+                        <h3><a href="/laravel-ecomm/public/store/view/{{ $products->id }}">{{ $products->title }}</a></h3>
 
                         <p>{{ $products->description }}</p>
 
                         <h5>Availability: <span class="{{ Availability::displayClass($products->availability) }}">
                                 {{ Availability::display($products->availability) }}
                             </span></h5>
-
+                        @if( $products->availability == "1" )
                         <p>
                             {{ Form::open(array('url' => 'store/addtocart')) }}
                             {{ Form::hidden('quantity', 1) }}
@@ -37,6 +37,7 @@
                             </button>
                             {{ Form::close() }}
                         </p>
+                        @endif
                     </div>
                     @endforeach
 	</div>
