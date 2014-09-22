@@ -33,7 +33,7 @@ class UsersController extends BaseController {
 
 		return Redirect::to('users/newaccount')
 		       ->with('message', '註冊失敗')
-		       ->withErrors($validator)
+		       ->withErrors($validation)
 		       ->withInput();
 	}
 

@@ -91,7 +91,7 @@
                         @endif
                     </div><!-- end user-menu -->
                     <div id="view-cart">
-                        <a href="/ecomm/public/store/cart">{{ HTML::image('img/blue-cart.gif', 'View Cart') }} View Cart</a>
+                        <a href="/laravel-ecomm/public/store/cart">{{ HTML::image('img/blue-cart.gif', 'View Cart') }} View Cart</a>
                     </div><!-- end view-cart -->
                 </section><!-- end action-bar -->
             </header>
@@ -125,7 +125,7 @@
                         <ul>
                             <li>{{HTML::link('users/signin', 'Sign In')}}</li>
                             <li>{{HTML::link('users/newaccount', 'Sign Up')}}</li>
-                            <li><a href="/ecomm/public//store/cart">Shopping Cart</a></li>
+                            <li><a href="/store/cart">Shopping Cart</a></li>
                         </ul>
                     </div><!-- end my-account -->
                     <div id="info">

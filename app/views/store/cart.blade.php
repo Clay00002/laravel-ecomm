@@ -27,7 +27,7 @@
                                 </td>
                                 <td>
                                     ${{ $products->total() }} 
-                                    <a href="/ecomm/public/store/removeitem/{{ $products->identifier }}">
+                                    <a href="/laravel-ecomm/public/store/removeitem/{{ $products->identifier }}">
                                         {{ HTML::image('img/remove.gif', 'remove product') }}
                                     </a>
                                 </td>

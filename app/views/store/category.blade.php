@@ -37,12 +37,12 @@
                 <div id="listings">
                     @foreach($product as $products)
                     <div class="product">
-                        <a href="/ecomm/public/store/view/{{ $products->id }}">
+                        <a href="/laravel-ecomm/public/store/view/{{ $products->id }}">
                             {{ HTML::image($products->image, $products->title,
                              array('class' => 'feature', 'width' => '240', 'height' => '127')) }}
                         </a>
 
-                        <h3><a href="/ecomm/public/store/view/{{ $products->id }}">{{ $products->title }}</a></h3>
+                        <h3><a href="/laravel-ecomm/public/store/view/{{ $products->id }}">{{ $products->title }}</a></h3>
 
                         <p>{{ $products->description }}</p>
 
